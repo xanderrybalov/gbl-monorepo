@@ -1,15 +1,20 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
+		"allowJs": false,
+		"checkJs": false,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
-		"sourceMap": true,
 		"strict": true,
 		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
-	}
+		"moduleResolution": "NodeNext",
+		"target": "ES2021",
+		"lib": ["DOM", "ES2021"],
+		"types": ["svelte"],
+		"jsx": "preserve"
+	},
+	"include": ["src/**/*", ".svelte-kit/types", "svelte.config.js"],
+	"exclude": ["node_modules"]
 }
