@@ -8,12 +8,12 @@
 	}>();
 </script>
 
-<div class="flex gap-[2rem] lg:gap-[2rem] xl:gap-[5rem]">
+<div class="flex gap-indicator lg:gap-indicator xl:gap-indicator-xl">
 	{#each slides, index}
 		<button
-			class="h-[0.5rem] w-[0.5rem] rounded-full transition-colors duration-300 focus:outline-none"
-			class:bg-[#e3ddd6]={currentIndex === index}
-			class:bg-[#6b6d73]={currentIndex !== index}
+			class="h-indicator-size w-indicator-size rounded-full transition-colors duration-300 focus:outline-none"
+			class:bg-bg-active={currentIndex === index}
+			class:bg-bg-inactive={currentIndex !== index}
 			role="tab"
 			aria-selected={currentIndex === index}
 			aria-label={`Go to slide ${index + 1}`}

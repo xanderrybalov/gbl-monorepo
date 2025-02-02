@@ -11,7 +11,9 @@ export default {
 				primary: '#f7eee4',
 				secondary: '#cfc6be',
 				'text-black': '#030303',
-				'text-white': '#fefefd'
+				'text-white': '#fefefd',
+				'bg-active': '#e3ddd6',
+				'bg-inactive': '#6b6d73'
 			},
 			fontWeight: {
 				'header-light': '300',
@@ -24,11 +26,17 @@ export default {
 				'menu-text-padding': '1rem',
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
-				'button-padding-y': '1.25rem !important'
+				'button-padding-y': '1.25rem !important',
+				'indicator': '2rem',
+				'indicator-xl': '5rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
-				'thumbnail-lower': '40%'
+				'thumbnail-lower': '40%',
+				'indicator-size': '0.5rem'
+			},
+			width: {
+				'indicator-size': '0.5rem'
 			},
 			minWidth: {
 				button: '200px !important'
