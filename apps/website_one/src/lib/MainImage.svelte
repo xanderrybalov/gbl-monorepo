@@ -2,11 +2,13 @@
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	export let mainImage: string;
-	export let season: string;
-	export let year: number;
-	export let onImageLoad: () => void;
-	export let isLoaded: boolean;
+	let { mainImage, season, year, onImageLoad, isLoaded } = $props<{
+		mainImage: string;
+		season: string;
+		year: number;
+		onImageLoad: () => void;
+		isLoaded: boolean;
+	}>();
 </script>
 
 <div
