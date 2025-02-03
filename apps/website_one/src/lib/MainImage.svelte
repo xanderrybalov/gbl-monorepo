@@ -11,7 +11,7 @@
 	}>();
 </script>
 
-<div
+<figure
 	class="relative h-full"
 	in:fly={{
 		x: 'transition-fly-x',
@@ -26,11 +26,11 @@
 		easing: cubicOut
 	}}
 >
-	<!-- Placeholder -->
 	<div
 		class="absolute inset-0 animate-pulse bg-gray-200"
 		class:opacity-0={isLoaded}
 		class:hidden={isLoaded}
+		aria-hidden="true"
 	></div>
 
 	<img
@@ -41,4 +41,9 @@
 		loading="lazy"
 		onload={onImageLoad}
 	/>
-</div>
+
+	<figcaption class="sr-only">
+		{season}
+		{year} Collection – Main View
+	</figcaption>
+</figure>
