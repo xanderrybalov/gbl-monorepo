@@ -14,7 +14,7 @@
 <TextOverlay {season} {title} />
 
 <div
-	class="absolute left-0 top-[51rem] flex w-full items-center justify-between p-secondary-padding text-white"
+	class="absolute left-0 top-content-info-top flex w-full items-center justify-between p-secondary-padding text-white"
 	role="contentinfo"
 >
 	<Social />
