@@ -3,12 +3,15 @@
 	import { cubicOut } from 'svelte/easing';
 	import ShopNowButton from './ShopNowButton.svelte';
 
-	export let thumbnails: string[];
-	export let mainImage: string;
-	export let currentIndex: number;
-	export let handleThumbnailLoad: (index: number) => void;
-	export let thumbnailsLoaded: boolean[];
-	export let slides: any;
+	let { thumbnails, mainImage, currentIndex, handleThumbnailLoad, thumbnailsLoaded, slides } =
+		$props<{
+			thumbnails: string[];
+			mainImage: string;
+			currentIndex: number;
+			handleThumbnailLoad: (index: number) => void;
+			thumbnailsLoaded: boolean[];
+			slides: any;
+		}>();
 </script>
 
 <div class="flex min-h-[900px] flex-col items-end justify-start overflow-hidden bg-primary">

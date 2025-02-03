@@ -97,7 +97,7 @@
 	<Thumbnails
 		thumbnails={slides[currentIndex].thumbnails}
 		mainImage={slides[currentIndex].mainImage}
-		{currentIndex}
+		currentIndex={currentIndex}
 		{handleThumbnailLoad}
 		{thumbnailsLoaded}
 		{slides}
