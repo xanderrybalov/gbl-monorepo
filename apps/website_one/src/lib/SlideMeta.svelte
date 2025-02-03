@@ -15,10 +15,11 @@
 
 <TextOverlay {season} {title} />
 
-<div
+<nav
 	class="absolute left-0 top-content-info-top flex w-full items-center justify-between p-secondary-padding text-white"
-	role="contentinfo"
+	aria-label="Slide navigation"
 >
 	<Social />
+
 	<Dots {currentIndex} {slides} {setSlide} />
-</div>
+</nav>
