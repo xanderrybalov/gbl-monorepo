@@ -39,6 +39,8 @@ export default {
 				'divider-margin-x': '1rem',
 				'season-position-left': '4.8rem',
 				'season-position-top': '20.8rem',
+				'padding-shop-button-x': '4.8rem',
+				'padding-shop-button-y': '1.4rem',
 				'social-gap': '2.5rem',
 				'title-position-top': '29rem',
 				'title-position-left': '3.8rem',
@@ -82,7 +84,8 @@ export default {
 				'title-line-height': '0.75'
 			},
 			minWidth: {
-				button: '200px !important'
+				button: '200px !important',
+				'shop-button-width': '140px'
 			}
 		}
 	},
