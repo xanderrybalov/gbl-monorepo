@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { Dots, SlideInfo, Social, TextOverlay } from './index.js';
 
-	export let season: string;
-	export let title: string;
-	export let year: number;
-	export let currentIndex: number;
-	export let slides: any;
-	export let setSlide: (index: number) => void;
+	let { season, title, year, currentIndex, slides, setSlide } = $props<{
+		season: string;
+		title: string;
+		year: number;
+		currentIndex: number;
+		slides: any;
+		setSlide: (index: number) => void;
+	}>();
 </script>
 
 <SlideInfo {season} {title} {year} />
