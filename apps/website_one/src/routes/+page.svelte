@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { CollectionSlider, Header } from '$lib/index.js';
+	import { Header } from '$lib/index.js';
+	import Main from '$lib/Main.svelte';
 	import { collections } from '$lib/types/types.js';
-
 
 	let currentIndex = 0;
 
@@ -11,11 +11,10 @@
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<!-- Header -->
 	<Header initialLanguage="ENG" onLanguageChange={handleLanguageChange} />
 
 	<!-- Main content -->
 	<main class="flex-grow">
-		<CollectionSlider slides={collections} {currentIndex} />
+		<Main slides={collections} {currentIndex} />
 	</main>
 </div>
