@@ -21,14 +21,14 @@
 	let thumbnailsLoaded: boolean[] = $state(Array(slides.length).fill(false));
 	let sliderId = crypto.randomUUID();
 
-	// Сброс загрузки миниатюр при смене слайда
+	// Reset thumbnail loading when changing slide
 	$effect(() => {
 		if (browser && slides[currentIndex]) {
 			thumbnailsLoaded = Array(slides.length).fill(false);
 		}
 	});
 
-	// Предзагрузка следующего изображения
+	// Preload the next image
 	$effect(() => {
 		if (browser && slides[currentIndex]) {
 			const nextIndex = (currentIndex + 1) % slides.length;
@@ -56,10 +56,10 @@
 </script>
 
 <div
-	class="grid max-h-screen min-h-screen bg-primary md:grid-cols-[auto] lg:grid-cols-[auto_600px]"
+	class="screen-min-height lg:grid-cols-grid-cols-main grid max-h-screen bg-primary md:grid-cols-[auto]"
 	id={sliderId}
 >
-	<div class="relative h-screen lg:min-h-[900px]" id={sliderId}>
+	<div class="main-image-min-height relative h-screen" id={sliderId}>
 		{#key slides[currentIndex].id}
 			<MainImage
 				mainImage={slides[currentIndex].mainImage}
@@ -86,7 +86,7 @@
 		<TextOverlay season="Summer" title="2020" />
 
 		<div
-			class="absolute left-0 top-[51rem] flex w-full items-center justify-between p-secondary-padding text-white"
+			class="top-content-info-top absolute left-0 flex w-full items-center justify-between p-secondary-padding text-white"
 			role="contentinfo"
 		>
 			<Social />
@@ -94,7 +94,6 @@
 		</div>
 	</div>
 
-	<!-- Правая колонка (миниатюры + описание + SHOP NOW) -->
 	<Thumbnails
 		thumbnails={slides[currentIndex].thumbnails}
 		mainImage={slides[currentIndex].mainImage}

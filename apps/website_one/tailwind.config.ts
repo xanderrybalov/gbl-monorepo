@@ -41,19 +41,25 @@ export default {
 				'season-position-top': '20.8rem',
 				'social-gap': '2.5rem',
 				'title-position-top': '29rem',
-				'title-position-left': '3.8rem'
+				'title-position-left': '3.8rem',
+				'content-info-top': '51rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
 				'thumbnail-lower': '40%',
 				'indicator-size': '0.5rem',
 				'menu-icon-height': '3.5rem',
-				'divider-height': '2px'
+				'divider-height': '2px',
+				'main-image-min-height': '900px',
+				'screen-min-height': '100vh'
 			},
 			width: {
 				'indicator-size': '0.5rem',
 				'menu-icon-width': '1.5rem',
 				'divider-width': '85px'
+			},
+			gridTemplateColumns: {
+				'grid-cols-main': 'auto 600px'
 			},
 			fontSize: {
 				'menu-button-text': '2xl',
