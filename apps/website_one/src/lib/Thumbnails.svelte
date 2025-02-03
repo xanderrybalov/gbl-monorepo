@@ -11,10 +11,8 @@
 	export let slides: any;
 </script>
 
-<div
-	class="min-h-thumbnail-min-height flex flex-col items-end justify-start overflow-hidden bg-primary"
->
-<!-- First thumbnail -->
+<div class="flex min-h-[900px] flex-col items-end justify-start overflow-hidden bg-primary">
+	<!-- First thumbnail -->
 	<div
 		class="mr-thumbnail-first-margin-right mt-thumbnail-first-margin-top h-thumbnail-first-height min-h-thumbnail-first-height w-thumbnail-first-width min-w-thumbnail-first-width self-end overflow-hidden"
 	>
@@ -39,7 +37,7 @@
 		{/key}
 	</div>
 
-<!-- Text block with line -->
+	<!-- Text block with line -->
 	<div
 		class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top gap-thumbnail-text-gap flex rotate-90 items-center"
 	>
@@ -56,7 +54,7 @@
 	<div
 		class="mr-thumbnail-second-margin-right mt-thumbnail-second-margin-top gap-thumbnail-text-gap flex w-[85%] items-end justify-end"
 	>
-	<!-- Second thumbnail -->
+		<!-- Second thumbnail -->
 		<div
 			class="h-thumbnail-second-height min-h-thumbnail-second-height w-thumbnail-second-width min-w-thumbnail-second-width flex-none self-end overflow-hidden"
 		>

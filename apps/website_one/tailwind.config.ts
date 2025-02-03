@@ -59,7 +59,6 @@ export default {
 				'indicator-size': '0.5rem',
 				'menu-icon-height': '3.5rem',
 				'divider-height': '2px',
-				'main-image-min-height': '900px',
 				'screen-min-height': '100vh',
 				'thumbnail-first-height': '330px',
 				'thumbnail-second-height': '275px',
@@ -75,7 +74,7 @@ export default {
 				'thumbnail-line-width': '7rem'
 			},
 			gridTemplateColumns: {
-				'grid-cols-main': 'auto 600px'
+				'grid-cols-main': 'auto_600px'
 			},
 			transitionProperty: {
 				'transition-fly-x': '60px',

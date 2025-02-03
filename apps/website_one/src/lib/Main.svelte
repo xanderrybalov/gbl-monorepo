@@ -56,10 +56,10 @@
 </script>
 
 <div
-	class="screen-min-height lg:grid-cols-grid-cols-main grid max-h-screen bg-primary md:grid-cols-[auto]"
+	class="grid max-h-screen min-h-screen bg-primary md:grid-cols-[auto] lg:grid-cols-[auto_600px]"
 	id={sliderId}
 >
-	<div class="main-image-min-height relative h-screen" id={sliderId}>
+	<div class="relative h-screen min-h-[900px] md:min-h-[1000px] lg:min-h-[900px]" id={sliderId}>
 		{#key slides[currentIndex].id}
 			<MainImage
 				mainImage={slides[currentIndex].mainImage}
@@ -86,7 +86,7 @@
 		<TextOverlay season="Summer" title="2020" />
 
 		<div
-			class="top-content-info-top absolute left-0 flex w-full items-center justify-between p-secondary-padding text-white"
+			class="absolute left-0 top-content-info-top flex w-full items-center justify-between p-secondary-padding text-white"
 			role="contentinfo"
 		>
 			<Social />
