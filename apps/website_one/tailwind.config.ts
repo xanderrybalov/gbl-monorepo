@@ -28,7 +28,7 @@ export default {
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
 				'button-padding-y': '1.25rem !important',
-				'indicator': '2rem',
+				indicator: '2rem',
 				'indicator-xl': '5rem',
 				'menu-gap': '2.8rem',
 				'menu-close-top': '1.5rem',
@@ -36,7 +36,9 @@ export default {
 				'menu-nav-gap': '2rem',
 				'navigation-right': '2.8rem',
 				'navigation-top': '22.2rem',
-				'divider-margin-x': '1rem'
+				'divider-margin-x': '1rem',
+				'season-position-left': '4.8rem',
+				'season-position-top': '20.8rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
@@ -52,7 +54,9 @@ export default {
 			},
 			fontSize: {
 				'menu-button-text': '2xl',
-				'menu-link-text': '4xl'
+				'menu-link-text': '4xl',
+				'season-text-sm': 'text-sm',
+				'season-text-md': 'text-xs'
 			},
 			minWidth: {
 				button: '200px !important'

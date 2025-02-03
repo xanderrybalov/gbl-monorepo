@@ -39,8 +39,8 @@
 </script>
 
 <div
-	class="p-primary-padding fixed left-0 top-0 z-50 flex w-full items-center justify-between transition-colors duration-300"
-	class:bg-menu-bg={scrolled}
+	class="fixed left-0 top-0 z-50 flex w-full items-center justify-between p-primary-padding transition-colors duration-300"
+	class:bg-white={scrolled}
 >
 	<button
 		class="flex items-center gap-2 transition-colors duration-300"
@@ -52,7 +52,7 @@
 		<img
 			src="/menu.svg"
 			alt=""
-			class="w-menu-icon-width h-menu-icon-height invert filter transition-all duration-300"
+			class="h-menu-icon-height w-menu-icon-width invert filter transition-all duration-300"
 			class:invert-0={scrolled}
 			class:invert={!scrolled}
 			aria-hidden="true"
@@ -60,7 +60,7 @@
 		<span class="pl-menu-text-padding">Menu</span>
 	</button>
 
-	<div class="gap-menu-gap flex">
+	<div class="flex gap-menu-gap">
 		<button
 			class="text-lg font-bold transition-colors duration-300 md:text-sm"
 			class:text-text-black={currentLanguage === 'ENG'}
@@ -86,10 +86,10 @@
 
 {#if isMenuOpen}
 	<div
-		class="bg-primary menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center transition-all duration-500"
+		class="menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center bg-primary transition-all duration-500"
 	>
 		<button
-			class="top-menu-close-top right-menu-close-right text-menu-button-text absolute font-bold text-black transition-opacity hover:opacity-70"
+			class="absolute right-menu-close-right top-menu-close-top text-menu-button-text font-bold text-black transition-opacity hover:opacity-70"
 			onclick={closeMenu}
 			aria-label="Close menu"
 		>
@@ -97,7 +97,7 @@
 		</button>
 
 		<nav
-			class="gap-menu-nav-gap text-menu-link-text flex flex-col items-center font-bold text-black"
+			class="flex flex-col items-center gap-menu-nav-gap text-menu-link-text font-bold text-black"
 		>
 			<button class="transition-opacity hover:opacity-70" onclick={() => console.log('FB Clicked')}
 				>FB</button
