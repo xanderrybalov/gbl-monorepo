@@ -1,23 +1,23 @@
-<div class="flex gap-[2.5rem]">
-    <button
-      class="transition-colors font-bold text-sm text-white"
-      onclick={() => {}}
-      aria-label="Switch to FB"
-    >
-      FB
-    </button>
-    <button
-      class="transition-colors font-bold text-sm text-white"
-      onclick={() => {}}
-      aria-label="Switch to PIN"
-    >
-      PIN
-    </button>
-    <button
-      class="transition-colors font-bold text-sm text-white"
-      onclick={() => {}}
-      aria-label="Switch to IG"
-    >
-      IG
-    </button>
-  </div>
+<div class="gap-social-gap flex">
+	<button
+		class="social-text-size font-bold text-white transition-colors"
+		onclick={() => {}}
+		aria-label="Switch to FB"
+	>
+		FB
+	</button>
+	<button
+		class="social-text-size font-bold text-white transition-colors"
+		onclick={() => {}}
+		aria-label="Switch to PIN"
+	>
+		PIN
+	</button>
+	<button
+		class="social-text-size font-bold text-white transition-colors"
+		onclick={() => {}}
+		aria-label="Switch to IG"
+	>
+		IG
+	</button>
+</div>

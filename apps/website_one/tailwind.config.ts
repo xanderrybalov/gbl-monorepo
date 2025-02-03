@@ -38,7 +38,8 @@ export default {
 				'navigation-top': '22.2rem',
 				'divider-margin-x': '1rem',
 				'season-position-left': '4.8rem',
-				'season-position-top': '20.8rem'
+				'season-position-top': '20.8rem',
+				'social-gap': '2.5rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
@@ -56,7 +57,8 @@ export default {
 				'menu-button-text': '2xl',
 				'menu-link-text': '4xl',
 				'season-text-sm': 'text-sm',
-				'season-text-md': 'text-xs'
+				'season-text-md': 'text-xs',
+				'social-text-size': 'text-sm'
 			},
 			minWidth: {
 				button: '200px !important'
