@@ -13,7 +13,8 @@ export default {
 				'text-black': '#030303',
 				'text-white': '#fefefd',
 				'bg-active': '#e3ddd6',
-				'bg-inactive': '#6b6d73'
+				'bg-inactive': '#6b6d73',
+				'menu-bg': 'rgba(247,238,228,0.8)'
 			},
 			fontWeight: {
 				'header-light': '300',
@@ -27,16 +28,26 @@ export default {
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
 				'button-padding-y': '1.25rem !important',
-				'indicator': '2rem',
-				'indicator-xl': '5rem'
+				indicator: '2rem',
+				'indicator-xl': '5rem',
+				'menu-gap': '2.8rem',
+				'menu-close-top': '1.5rem',
+				'menu-close-right': '2rem',
+				'menu-nav-gap': '2rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
 				'thumbnail-lower': '40%',
-				'indicator-size': '0.5rem'
+				'indicator-size': '0.5rem',
+				'menu-icon-height': '3.5rem'
 			},
 			width: {
-				'indicator-size': '0.5rem'
+				'indicator-size': '0.5rem',
+				'menu-icon-width': '1.5rem'
+			},
+			fontSize: {
+				'menu-button-text': '2xl',
+				'menu-link-text': '4xl'
 			},
 			minWidth: {
 				button: '200px !important'
