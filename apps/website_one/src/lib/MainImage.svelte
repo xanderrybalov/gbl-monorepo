@@ -11,8 +11,18 @@
 
 <div
 	class="relative h-full"
-	in:fly={{ x: 60, duration: 600, opacity: 1, easing: cubicOut }}
-	out:fly={{ x: -60, duration: 600, opacity: 0, easing: cubicOut }}
+	in:fly={{
+		x: 'transition-fly-x',
+		duration: 600,
+		opacity: 1,
+		easing: cubicOut
+	}}
+	out:fly={{
+		x: '-transition-fly-x',
+		duration: 600,
+		opacity: 0,
+		easing: cubicOut
+	}}
 >
 	<!-- Placeholder -->
 	<div
@@ -24,7 +34,7 @@
 	<img
 		src={mainImage}
 		alt={`${season} ${year} collection main view`}
-		class="h-full w-full transform-gpu object-cover transition-opacity duration-300 ease-in-out"
+		class="duration-transition-main-image-duration h-full w-full transform-gpu object-cover transition-opacity ease-in-out"
 		class:opacity-0={!isLoaded}
 		loading="lazy"
 		onload={onImageLoad}

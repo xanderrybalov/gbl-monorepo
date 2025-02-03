@@ -61,6 +61,10 @@ export default {
 			gridTemplateColumns: {
 				'grid-cols-main': 'auto 600px'
 			},
+			transitionProperty: {
+				'transition-fly-x': '60px',
+				'transition-main-image-duration': '300'
+			},
 			fontSize: {
 				'menu-button-text': '2xl',
 				'menu-link-text': '4xl',
