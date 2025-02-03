@@ -28,22 +28,27 @@ export default {
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
 				'button-padding-y': '1.25rem !important',
-				indicator: '2rem',
+				'indicator': '2rem',
 				'indicator-xl': '5rem',
 				'menu-gap': '2.8rem',
 				'menu-close-top': '1.5rem',
 				'menu-close-right': '2rem',
-				'menu-nav-gap': '2rem'
+				'menu-nav-gap': '2rem',
+				'navigation-right': '2.8rem',
+				'navigation-top': '22.2rem',
+				'divider-margin-x': '1rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
 				'thumbnail-lower': '40%',
 				'indicator-size': '0.5rem',
-				'menu-icon-height': '3.5rem'
+				'menu-icon-height': '3.5rem',
+				'divider-height': '2px'
 			},
 			width: {
 				'indicator-size': '0.5rem',
-				'menu-icon-width': '1.5rem'
+				'menu-icon-width': '1.5rem',
+				'divider-width': '85px'
 			},
 			fontSize: {
 				'menu-button-text': '2xl',

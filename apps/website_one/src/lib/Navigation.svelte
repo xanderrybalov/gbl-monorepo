@@ -6,14 +6,12 @@
 		totalSlides: number;
 	}>();
 
-	// Определяем метки для кнопок навигации
-	let previousLabel = $derived(`Перейти к предыдущему слайду (${currentSlide} из ${totalSlides})`);
-	let nextLabel = $derived(`Перейти к следующему слайду (${currentSlide} из ${totalSlides})`);
+	let previousLabel = $derived(`Go to previous slide (${currentSlide} from ${totalSlides})`);
+	let nextLabel = $derived(`Go to next slide (${currentSlide} from ${totalSlides})`);
 </script>
 
-<!-- Контейнер для кнопок навигации -->
 <div
-	class="absolute right-[2.8rem] top-[22.2rem] z-10 flex -translate-y-1/2 transform items-center"
+	class="absolute right-navigation-right top-navigation-top z-10 flex -translate-y-1/2 transform items-center"
 >
 	<button
 		class="text-base text-white transition-opacity hover:opacity-80"
@@ -23,7 +21,7 @@
 		Next
 	</button>
 
-	<div class="mx-4 h-[2px] w-[85px] bg-white"></div>
+	<div class="mx-divider-margin-x h-divider-height w-divider-width bg-white"></div>
 
 	<button
 		class="text-base text-white transition-opacity hover:opacity-80"
