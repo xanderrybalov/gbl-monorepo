@@ -39,7 +39,9 @@ export default {
 				'divider-margin-x': '1rem',
 				'season-position-left': '4.8rem',
 				'season-position-top': '20.8rem',
-				'social-gap': '2.5rem'
+				'social-gap': '2.5rem',
+				'title-position-top': '29rem',
+				'title-position-left': '3.8rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
@@ -56,9 +58,18 @@ export default {
 			fontSize: {
 				'menu-button-text': '2xl',
 				'menu-link-text': '4xl',
-				'season-text-sm': 'text-sm',
-				'season-text-md': 'text-xs',
-				'social-text-size': 'text-sm'
+				'season-text-xl': '11rem',
+				'season-text-lg': '5rem',
+				'season-text-base': '9rem',
+				'title-text-xl': '11rem',
+				'title-text-lg': '10rem',
+				'title-text-base': '9rem'
+			},
+			letterSpacing: {
+				'title-letter-spacing': '-0.02em'
+			},
+			lineHeight: {
+				'title-line-height': '0.75'
 			},
 			minWidth: {
 				button: '200px !important'

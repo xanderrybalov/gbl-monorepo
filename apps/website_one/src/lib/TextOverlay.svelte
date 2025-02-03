@@ -1,16 +1,16 @@
 <script lang="ts">
-  let { season, title } = $props();
+	let { season, title } = $props();
 </script>
 
-<div 
-  class="absolute text-white text-left leading-[0.75] top-[29rem] left-[3.8rem] 
-  font-[Garamond,serif] tracking-[-0.02em]">
-  
-  <span class="block font-light xl:text-[11rem] lg:text-[5rem] text-[9rem]">
-    {season}
-  </span>
+<div
+	class="leading-title-line-height top-title-position-top left-title-position-left tracking-title-letter-spacing absolute text-left
+  font-[Garamond,serif] text-white"
+>
+	<span class="text-title-text-base lg:text-season-text-lg xl:text-title-text-xl block font-light">
+		{season}
+	</span>
 
-  <span class="block font-light xl:text-[11rem] lg:text-[10rem] text-[9rem]">
-    {title}
-  </span>
+	<span class="text-title-text-base lg:text-title-text-lg xl:text-title-text-xl block font-light">
+		{title}
+	</span>
 </div>
