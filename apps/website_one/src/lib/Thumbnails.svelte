@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-	import { ShopNowButton } from './index.js';
+	import ShopNowButton from './ShopNowButton.svelte';
+
 	export let thumbnails: string[];
 	export let mainImage: string;
 	export let currentIndex: number;
@@ -10,10 +11,12 @@
 	export let slides: any;
 </script>
 
-<div class="flex min-h-[900px] flex-col items-end justify-start overflow-hidden bg-primary">
-	<!-- Первая миниатюра -->
+<div
+	class="min-h-thumbnail-min-height flex flex-col items-end justify-start overflow-hidden bg-primary"
+>
+<!-- First thumbnail -->
 	<div
-		class="mr-[8.5rem] mt-[14.5rem] h-[330px] min-h-[330px] w-[245px] min-w-[245px] self-end overflow-hidden"
+		class="mr-thumbnail-first-margin-right mt-thumbnail-first-margin-top h-thumbnail-first-height min-h-thumbnail-first-height w-thumbnail-first-width min-w-thumbnail-first-width self-end overflow-hidden"
 	>
 		<!-- Placeholder -->
 		<div
@@ -30,27 +33,33 @@
 				class:opacity-0={!thumbnailsLoaded[currentIndex]}
 				loading="lazy"
 				onload={() => handleThumbnailLoad(currentIndex)}
-				in:fly={{ x: 60, duration: 600, opacity: 1, easing: cubicOut }}
-				out:fly={{ x: -60, duration: 600, opacity: 0, easing: cubicOut }}
+				in:fly={{ x: 'transition-fly-x', duration: 600, opacity: 1, easing: cubicOut }}
+				out:fly={{ x: '-transition-fly-x', duration: 600, opacity: 0, easing: cubicOut }}
 			/>
 		{/key}
 	</div>
 
-	<!-- Текстовый блок с линией -->
-	<div class="mr-[-8.5rem] mt-[-6rem] flex rotate-90 items-center gap-[3rem]">
+<!-- Text block with line -->
+	<div
+		class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top gap-thumbnail-text-gap flex rotate-90 items-center"
+	>
 		<span class="origin-bottom whitespace-nowrap text-sm text-black" aria-label="Reference">
 			Ref. {slides[currentIndex].ref}
 		</span>
-		<div class="h-[2px] w-[7rem] bg-black"></div>
+		<div class="h-thumbnail-line-height w-thumbnail-line-width bg-black"></div>
 		<span class="origin-top whitespace-nowrap text-sm text-black" aria-label="Description">
 			{slides[currentIndex].description}
 		</span>
 	</div>
 
-	<!-- Вторая миниатюра и кнопка SHOP NOW -->
-	<div class="mr-[4rem] mt-[6.5rem] flex w-[85%] items-end justify-end gap-[3rem]">
-		<!-- Вторая миниатюра -->
-		<div class="h-[275px] min-h-[275px] w-[205px] min-w-[205px] flex-none self-end overflow-hidden">
+	<!-- Second thumbnail and SHOP NOW button -->
+	<div
+		class="mr-thumbnail-second-margin-right mt-thumbnail-second-margin-top gap-thumbnail-text-gap flex w-[85%] items-end justify-end"
+	>
+	<!-- Second thumbnail -->
+		<div
+			class="h-thumbnail-second-height min-h-thumbnail-second-height w-thumbnail-second-width min-w-thumbnail-second-width flex-none self-end overflow-hidden"
+		>
 			<!-- Placeholder -->
 			<div
 				class="inset-0 animate-pulse bg-gray-200"
@@ -66,13 +75,13 @@
 					class:opacity-0={!thumbnailsLoaded[currentIndex]}
 					loading="lazy"
 					onload={() => handleThumbnailLoad(currentIndex)}
-					in:fly={{ x: 60, duration: 600, opacity: 1, easing: cubicOut }}
-					out:fly={{ x: -60, duration: 600, opacity: 0, easing: cubicOut }}
+					in:fly={{ x: 'transition-fly-x', duration: 600, opacity: 1, easing: cubicOut }}
+					out:fly={{ x: '-transition-fly-x', duration: 600, opacity: 0, easing: cubicOut }}
 				/>
 			{/key}
 		</div>
 
-		<!-- Кнопка SHOP NOW -->
+		<!-- SHOP NOW -->
 		<ShopNowButton />
 	</div>
 </div>

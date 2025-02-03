@@ -44,7 +44,14 @@ export default {
 				'social-gap': '2.5rem',
 				'title-position-top': '29rem',
 				'title-position-left': '3.8rem',
-				'content-info-top': '51rem'
+				'content-info-top': '51rem',
+				'thumbnail-first-margin-top': '14.5rem',
+				'thumbnail-first-margin-right': '8.5rem',
+				'thumbnail-second-margin-top': '6.5rem',
+				'thumbnail-second-margin-right': '4rem',
+				'thumbnail-text-margin-top': '-6rem',
+				'thumbnail-text-margin-right': '-8.5rem',
+				'thumbnail-text-gap': '3rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
@@ -53,12 +60,19 @@ export default {
 				'menu-icon-height': '3.5rem',
 				'divider-height': '2px',
 				'main-image-min-height': '900px',
-				'screen-min-height': '100vh'
+				'screen-min-height': '100vh',
+				'thumbnail-first-height': '330px',
+				'thumbnail-second-height': '275px',
+				'thumbnail-line-height': '2px',
+				'thumbnail-min-height':'900px',
 			},
 			width: {
 				'indicator-size': '0.5rem',
 				'menu-icon-width': '1.5rem',
-				'divider-width': '85px'
+				'divider-width': '85px',
+				'thumbnail-first-width': '245px',
+				'thumbnail-second-width': '205px',
+				'thumbnail-line-width': '7rem'
 			},
 			gridTemplateColumns: {
 				'grid-cols-main': 'auto 600px'
@@ -85,7 +99,9 @@ export default {
 			},
 			minWidth: {
 				button: '200px !important',
-				'shop-button-width': '140px'
+				'shop-button-width': '140px',
+				'thumbnail-first-width': '245px',
+				'thumbnail-second-width': '205px'
 			}
 		}
 	},
