@@ -1,13 +1,17 @@
 <script lang="ts">
-	export let season: string;
-	export let title: string;
-	export let year: number;
+	let { season, title, year } = $props<{
+		season: string;
+		title: string;
+		year: number;
+	}>();
 </script>
 
-<div
-	class="top-season-position-top left-season-position-left absolute text-sm font-bold text-white md:text-xs"
+<p
+	role="heading"
+	aria-level="2"
+	class="absolute left-season-position-left top-season-position-top text-sm font-bold text-white md:text-xs"
 >
 	{season}<br />
 	{title}<br />
 	{year}
-</div>
+</p>
