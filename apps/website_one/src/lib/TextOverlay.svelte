@@ -2,15 +2,26 @@
 	let { season, title } = $props();
 </script>
 
-<div
-	class="leading-title-line-height top-title-position-top left-title-position-left tracking-title-letter-spacing absolute text-left
-  font-[Garamond,serif] text-white"
+<h1
+	id="collection-title"
+	class="absolute left-title-position-left top-title-position-top text-left font-[Garamond,serif] leading-title-line-height tracking-title-letter-spacing text-white"
+	aria-labelledby="season-title"
 >
-	<span class="text-title-text-base lg:text-season-text-lg xl:text-title-text-xl block font-light">
+	<span
+		id="season-title"
+		class="block text-title-text-base font-light lg:text-season-text-lg xl:text-title-text-xl"
+	>
 		{season}
 	</span>
 
-	<span class="text-title-text-base lg:text-title-text-lg xl:text-title-text-xl block font-light">
+	<span
+		id="title-name"
+		class="block text-title-text-base font-light lg:text-title-text-lg xl:text-title-text-xl"
+	>
 		{title}
 	</span>
-</div>
+</h1>
+
+<span id="collection-description" class="sr-only">
+	{season} Collection - {title}
+</span>
