@@ -2,6 +2,7 @@
 	import { browser } from '$app/environment';
 	import {
 		Dots,
+		Header,
 		Navigation,
 		SlideInfo,
 		Social,
@@ -53,12 +54,17 @@
 		mainImageLoaded = false;
 		currentIndex = (currentIndex - 1 + slides.length) % slides.length;
 	}
+
+	function handleLanguageChange(newLanguage: 'ENG' | 'FR') {
+		console.log(`Language changed to ${newLanguage}`);
+	}
 </script>
 
 <div
 	class="grid max-h-screen min-h-screen bg-primary md:grid-cols-[auto] lg:grid-cols-[auto_600px]"
 	id={sliderId}
 >
+	<Header initialLanguage="ENG" onLanguageChange={handleLanguageChange} />
 	<div
 		class="relative h-screen min-h-[900px] bg-primary md:min-h-[1000px] lg:min-h-[900px]"
 		id={sliderId}
