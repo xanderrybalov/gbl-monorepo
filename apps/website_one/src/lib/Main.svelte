@@ -95,7 +95,7 @@
 		<TextOverlay season="Summer" title="2020" />
 
 		<nav
-			class="absolute left-0 top-content-info-top flex w-full items-center justify-between p-secondary-padding text-white"
+			class="sm:p-main-padding-sm p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
 			aria-live="polite"
 		>

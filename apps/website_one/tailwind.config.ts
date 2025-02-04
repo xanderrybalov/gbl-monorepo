@@ -22,8 +22,10 @@ export default {
 				'header-bold': '700'
 			},
 			spacing: {
-				'primary-padding': '2rem 4rem 2rem 3.5rem',
-				'secondary-padding': '2rem 3.5rem 0 4.5rem',
+				'nav-padding': '2rem 1rem 2rem 1rem',
+				'nav-padding-lg': '2rem 4rem 2rem 3.5rem',
+				'main-padding': '2rem 1rem 4rem 1rem',
+				'main-padding-sm': '2rem 3.5rem 4rem 3rem',
 				'menu-text-padding': '1rem',
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
@@ -44,7 +46,6 @@ export default {
 				'social-gap': '2.5rem',
 				'title-position-top': '29rem',
 				'title-position-left': '3.8rem',
-				'content-info-top': '51rem',
 				'thumbnail-first-margin-top': '14.5rem',
 				'thumbnail-first-margin-right': '8.5rem',
 				'thumbnail-second-margin-top': '6.5rem',
@@ -63,7 +64,7 @@ export default {
 				'thumbnail-first-height': '330px',
 				'thumbnail-second-height': '275px',
 				'thumbnail-line-height': '2px',
-				'thumbnail-min-height':'900px',
+				'thumbnail-min-height': '900px'
 			},
 			width: {
 				'indicator-size': '0.5rem',

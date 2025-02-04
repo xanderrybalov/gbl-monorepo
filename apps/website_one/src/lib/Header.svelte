@@ -39,7 +39,7 @@
 </script>
 
 <div
-	class="fixed left-0 top-0 z-50 flex w-full items-center justify-between p-primary-padding transition-colors duration-300"
+	class="p-nav-padding lg:p-nav-padding-md fixed left-0 top-0 z-50 flex w-full items-center justify-between transition-colors duration-300"
 	class:bg-white={scrolled}
 >
 	<button

@@ -7,7 +7,6 @@ export { default as Social } from './Social.svelte';
 export { default as TextOverlay } from './TextOverlay.svelte';
 export { default as ShopNowButton } from './ShopNowButton.svelte';
 export { default as MainImage } from './MainImage.svelte';
-export { default as SlideMeta } from './SlideMeta.svelte';
 export { default as Thumbnails } from './Thumbnails.svelte';
 export { default as Main } from './Main.svelte';
 

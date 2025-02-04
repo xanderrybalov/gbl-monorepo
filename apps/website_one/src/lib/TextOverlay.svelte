@@ -9,17 +9,17 @@
 >
 	<span
 		id="season-title"
-		class="block text-title-text-base font-light lg:text-season-text-lg xl:text-title-text-xl"
+		class="text-[2rem]font-light block sm:text-[4rem] md:text-[5rem] lg:text-season-text-lg xl:text-title-text-xl"
 	>
 		{season}
 	</span>
 
-	<span
+	<!-- <span
 		id="title-name"
 		class="block text-title-text-base font-light lg:text-title-text-lg xl:text-title-text-xl"
 	>
 		{title}
-	</span>
+	</span> -->
 </h1>
 
 <span id="collection-description" class="sr-only">
