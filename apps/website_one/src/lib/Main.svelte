@@ -79,23 +79,27 @@
 			/>
 		{/key}
 
-		<SlideInfo
-			season={slides[currentIndex].season}
-			title={slides[currentIndex].title}
-			year={slides[currentIndex].year}
-		/>
+		<div
+			class="p-main-padding sm:p-main-padding-max absolute left-0 top-[18rem] flex w-full flex-col justify-between sm:flex-row"
+		>
+			<SlideInfo
+				season={slides[currentIndex].season}
+				title={slides[currentIndex].title}
+				year={slides[currentIndex].year}
+			/>
 
-		<Navigation
-			onPrevious={prevSlide}
-			onNext={nextSlide}
-			currentSlide={currentIndex}
-			totalSlides={slides.length}
-		/>
+			<Navigation
+				onPrevious={prevSlide}
+				onNext={nextSlide}
+				currentSlide={currentIndex}
+				totalSlides={slides.length}
+			/>
+		</div>
 
 		<TextOverlay season="Summer" title="2020" />
 
 		<nav
-			class="sm:p-main-padding-sm p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
+			class="sm:p-main-padding-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
 			aria-live="polite"
 		>

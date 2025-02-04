@@ -25,7 +25,7 @@ export default {
 				'nav-padding': '2rem 1rem 2rem 1rem',
 				'nav-padding-lg': '2rem 4rem 2rem 3.5rem',
 				'main-padding': '2rem 1rem 2rem 1rem',
-				'main-padding-sm': '2rem 3.5rem 2rem 3rem',
+				'main-padding-max': '2rem 2rem 2rem 5rem',
 				'menu-text-padding': '1rem',
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
