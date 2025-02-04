@@ -14,7 +14,7 @@
 	let newTaskText = $state('');
 
 	function addTask() {
-		if (newTaskText.trim()) {
+		if (newTaskText.trim() && newTaskText.length <= 20) {
 			tasks = [...tasks, { id: Date.now(), text: newTaskText, completed: false }];
 			newTaskText = '';
 		}
@@ -34,12 +34,16 @@
 		</div>
 
 		<Input bind:value={newTaskText} placeholder="Add Task" />
+
+		{#if newTaskText.length > 19}
+			<p class="mt-2 text-sm text-green-500">⚠️ You cannot enter more than 20 characters.</p>
+		{/if}
 	</div>
 
 	<Button
 		label="Add"
 		ariaLabel="Add a new task"
-		classes="absolute bottom-negative-button shadow-button-transform transition-transform duration-200 transform hover:scale-105"
+		classes="absolute bottom-negative-button shadow-button-transform transition-transform duration-200 transform"
 		onClick={addTask}
 	/>
 </div>

@@ -3,6 +3,12 @@
 		value: string;
 		placeholder?: string;
 	}>();
+
+	function enforceMaxLength() {
+		if (value.length > 20) {
+			value = value.slice(0, 20);
+		}
+	}
 </script>
 
 <div class="my-input-margin-y w-full px-input-padding-x">
@@ -10,7 +16,10 @@
 		type="text"
 		bind:value
 		{placeholder}
-		class="focus:input-ring w-full border border-input-border p-input-padding placeholder-secondary-violett focus:outline-none focus:ring-secondary-violett"
+		maxlength="20"
+		class="w-full border border-input-border p-input-padding placeholder-secondary-violett
+			   focus:outline-none focus:ring-2 focus:ring-secondary-violett"
 		aria-label="New task input"
+		oninput={enforceMaxLength}
 	/>
 </div>
