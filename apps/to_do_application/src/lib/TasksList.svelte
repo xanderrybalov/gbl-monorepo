@@ -12,12 +12,22 @@
 	]);
 
 	let newTaskText = $state('');
+	let showError = $state(false);
 
 	function addTask() {
-		if (newTaskText.trim() && newTaskText.length <= 20) {
-			tasks = [...tasks, { id: Date.now(), text: newTaskText, completed: false }];
-			newTaskText = '';
+		if (!newTaskText.trim()) {
+			showError = true;
+			return;
 		}
+
+		if (newTaskText.length > 20) {
+			showError = false;
+			return;
+		}
+
+		tasks = [...tasks, { id: Date.now(), text: newTaskText, completed: false }];
+		newTaskText = '';
+		showError = false;
 	}
 
 	function toggleTask(id: number) {
@@ -35,8 +45,12 @@
 
 		<Input bind:value={newTaskText} placeholder="Add Task" />
 
-		{#if newTaskText.length > 19}
-			<p class="mt-2 text-sm text-green-500">⚠️ You cannot enter more than 20 characters.</p>
+		{#if newTaskText.length >= 20}
+			<p class="mt-2 text-sm text-green-500">⚠️ Maximum 20 characters allowed.</p>
+		{/if}
+
+		{#if showError}
+			<p class="mt-2 text-sm text-red-500">⚠️ Task description cannot be empty.</p>
 		{/if}
 	</div>
 
