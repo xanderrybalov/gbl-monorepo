@@ -25,7 +25,6 @@ export default {
 			spacing: {
 				'task-gap': '0.7rem',
 				'input-padding': '0.75rem',
-				'main-container-padding': '10rem 0.5rem',
 				'container-padding': '2rem 0.5rem',
 				'button-padding-x': '3.5rem',
 				'button-padding-y': '0.8rem',
