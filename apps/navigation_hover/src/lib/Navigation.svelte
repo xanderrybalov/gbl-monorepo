@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { NavButton } from './index.js';
 
-	export let active = 'Branding';
+	let { active = 'Branding' } = $props<{ active?: string }>();
 	const links = ['Animation', 'Branding', 'Illustration'];
 
 	const handleActivate = (link: string): void => {

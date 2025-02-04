@@ -1,5 +1,5 @@
 <script>
-	import { BackgroundContainer, Navigation } from "$lib";
+	import { BackgroundContainer, Navigation } from '$lib';
 </script>
 
 <BackgroundContainer>
