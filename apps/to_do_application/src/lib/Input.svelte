@@ -10,7 +10,9 @@
 		type="text"
 		bind:value
 		{placeholder}
-		class="focus:input-ring w-full border border-input-border p-input-padding placeholder-secondary-violett focus:outline-none focus:ring-secondary-violett"
+		maxlength="20"
+		class="w-full border border-input-border p-input-padding placeholder-secondary-violett
+		       focus:outline-none focus:ring-2 focus:ring-secondary-violett"
 		aria-label="New task input"
 	/>
 </div>
