@@ -43,11 +43,14 @@
 	class:bg-white={scrolled}
 >
 	<button
-		class="flex items-center gap-2 transition-colors duration-300"
+		id="menu-button"
+		class="flex items-center gap-2 transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 		class:text-text-black={scrolled}
 		class:text-text-white={!scrolled}
 		onclick={openMenu}
 		aria-label="Open menu"
+		aria-haspopup="menu"
+		aria-expanded={isMenuOpen}
 	>
 		<img
 			src="/menu.svg"
@@ -62,22 +65,24 @@
 
 	<div class="flex gap-menu-gap">
 		<button
-			class="text-lg font-bold transition-colors duration-300 md:text-sm"
+			class="text-lg font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black md:text-sm"
 			class:text-text-black={currentLanguage === 'ENG'}
 			class:text-secondary={currentLanguage !== 'ENG'}
 			onclick={() => switchLanguage('ENG')}
 			aria-label="Switch to English"
 			aria-pressed={currentLanguage === 'ENG'}
+			aria-current={currentLanguage === 'ENG' ? 'page' : undefined}
 		>
 			ENG
 		</button>
 		<button
-			class="text-lg font-bold transition-colors duration-300 md:text-sm"
+			class="text-lg font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black md:text-sm"
 			class:text-text-black={currentLanguage === 'FR'}
 			class:text-secondary={currentLanguage !== 'FR'}
 			onclick={() => switchLanguage('FR')}
 			aria-label="Switch to French"
 			aria-pressed={currentLanguage === 'FR'}
+			aria-current={currentLanguage === 'FR' ? 'page' : undefined}
 		>
 			FR
 		</button>
@@ -87,9 +92,13 @@
 {#if isMenuOpen}
 	<div
 		class="menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center bg-primary transition-all duration-500"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="menu-button"
+		tabindex="-1"
 	>
 		<button
-			class="absolute right-menu-close-right top-menu-close-top text-menu-button-text font-bold text-black transition-opacity hover:opacity-70"
+			class="absolute right-menu-close-right top-menu-close-top text-menu-button-text font-bold text-black transition-opacity hover:opacity-70 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 			onclick={closeMenu}
 			aria-label="Close menu"
 		>
@@ -99,14 +108,20 @@
 		<nav
 			class="flex flex-col items-center gap-menu-nav-gap text-menu-link-text font-bold text-black"
 		>
-			<button class="transition-opacity hover:opacity-70" onclick={() => console.log('FB Clicked')}
-				>FB</button
+			<a
+				href="/facebook"
+				class="transition-opacity hover:opacity-70 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
+				>FB</a
 			>
-			<button class="transition-opacity hover:opacity-70" onclick={() => console.log('PIN Clicked')}
-				>PIN</button
+			<a
+				href="/pinterest"
+				class="transition-opacity hover:opacity-70 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
+				>PIN</a
 			>
-			<button class="transition-opacity hover:opacity-70" onclick={() => console.log('IG Clicked')}
-				>IG</button
+			<a
+				href="/instagram"
+				class="transition-opacity hover:opacity-70 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
+				>IG</a
 			>
 		</nav>
 	</div>
