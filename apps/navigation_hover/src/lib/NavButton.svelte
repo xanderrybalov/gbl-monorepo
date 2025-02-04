@@ -1,7 +1,13 @@
 <script lang="ts">
-	export let link: string;
-	export let isActive: boolean = false;
-	export let onActivate: (link: string) => void;
+	let {
+		link,
+		isActive = false,
+		onActivate
+	} = $props<{
+		link: string;
+		isActive?: boolean;
+		onActivate: (link: string) => void;
+	}>();
 </script>
 
 <button
@@ -9,7 +15,7 @@
 	tabindex="0"
 	aria-current={isActive ? 'page' : undefined}
 	aria-label={`Go to ${link} section`}
-	on:click={() => onActivate?.(link)}
+	onclick={() => onActivate?.(link)}
 >
 	<span class={isActive ? 'text-primary' : ''}>{link}</span>
 	<div
