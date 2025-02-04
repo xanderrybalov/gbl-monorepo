@@ -16,7 +16,7 @@
 	aria-live="polite"
 >
 	<button
-		class="text-base text-white transition-opacity hover:opacity-80 focus:outline focus:outline-white focus:ring-2 focus:ring-white"
+		class="text-base text-white transition-opacity hover:opacity-80"
 		onclick={onNext}
 		aria-label={nextLabel}
 	>
@@ -26,7 +26,7 @@
 	<div class="mx-divider-margin-x h-divider-height w-divider-width bg-white"></div>
 
 	<button
-		class="text-base text-white transition-opacity hover:opacity-80 focus:outline focus:outline-white focus:ring-2 focus:ring-white"
+		class="text-base text-white transition-opacity hover:opacity-80"
 		onclick={onPrevious}
 		aria-label={previousLabel}
 	>

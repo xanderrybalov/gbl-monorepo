@@ -59,7 +59,10 @@
 	class="grid max-h-screen min-h-screen bg-primary md:grid-cols-[auto] lg:grid-cols-[auto_600px]"
 	id={sliderId}
 >
-	<div class="relative h-screen min-h-[900px] md:min-h-[1000px] lg:min-h-[900px] bg-primary" id={sliderId}>
+	<div
+		class="relative h-screen min-h-[900px] bg-primary md:min-h-[1000px] lg:min-h-[900px]"
+		id={sliderId}
+	>
 		{#key slides[currentIndex].id}
 			<MainImage
 				mainImage={slides[currentIndex].mainImage}
@@ -85,13 +88,14 @@
 
 		<TextOverlay season="Summer" title="2020" />
 
-		<div
+		<nav
 			class="absolute left-0 top-content-info-top flex w-full items-center justify-between p-secondary-padding text-white"
-			role="contentinfo"
+			aria-label="Slide navigation"
+			aria-live="polite"
 		>
 			<Social />
 			<Dots {currentIndex} {slides} setSlide={(index: number) => (currentIndex = index)} />
-		</div>
+		</nav>
 	</div>
 
 	<Thumbnails
