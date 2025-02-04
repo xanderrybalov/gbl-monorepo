@@ -24,8 +24,8 @@ export default {
 			spacing: {
 				'nav-padding': '2rem 1rem 2rem 1rem',
 				'nav-padding-lg': '2rem 4rem 2rem 3.5rem',
-				'main-padding': '2rem 1rem 4rem 1rem',
-				'main-padding-sm': '2rem 3.5rem 4rem 3rem',
+				'main-padding': '2rem 1rem 2rem 1rem',
+				'main-padding-sm': '2rem 3.5rem 2rem 3rem',
 				'menu-text-padding': '1rem',
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
@@ -52,7 +52,10 @@ export default {
 				'thumbnail-second-margin-right': '4rem',
 				'thumbnail-text-margin-top': '-6rem',
 				'thumbnail-text-margin-right': '-8.5rem',
-				'thumbnail-text-gap': '3rem'
+				'thumbnail-text-gap': '3rem',
+				'title-padding': '1rem', // По умолчанию
+				'title-padding-sm': '2rem',
+				'title-padding-md': '3rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
@@ -84,11 +87,9 @@ export default {
 			fontSize: {
 				'menu-button-text': '2xl',
 				'menu-link-text': '4xl',
-				'season-text-xl': '11rem',
-				'season-text-lg': '5rem',
+				'season-text-lg': '6rem', // По умолчанию
 				'season-text-base': '9rem',
 				'title-text-xl': '11rem',
-				'title-text-lg': '10rem',
 				'title-text-base': '9rem'
 			},
 			letterSpacing: {
