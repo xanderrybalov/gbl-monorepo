@@ -2,6 +2,17 @@
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import ShopNowButton from './ShopNowButton.svelte';
+	import { onMount } from 'svelte';
+
+	let showElement = $state(true);
+
+	onMount(() => {
+		showElement = window.innerWidth >= 1024;
+
+		window.addEventListener('resize', () => {
+			showElement = window.innerWidth >= 1024;
+		});
+	});
 
 	let { thumbnails, mainImage, currentIndex, handleThumbnailLoad, thumbnailsLoaded, slides } =
 		$props<{
@@ -47,22 +58,23 @@
 	</figure>
 
 	<!-- Text block with line -->
-	<div
-		class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top
-	       hidden rotate-90 items-center
-	       gap-thumbnail-text-gap lg:flex"
-	>
-		<span class="origin-bottom whitespace-nowrap text-sm text-black" aria-labelledby="ref-label">
-			Ref. {slides[currentIndex].ref}
-		</span>
-		<div class="h-thumbnail-line-height w-thumbnail-line-width bg-black"></div>
-		<span id="ref-label" class="sr-only">Reference number</span>
+	{#if showElement}
+		<div
+			class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top
+		       flex rotate-90 items-center gap-thumbnail-text-gap"
+		>
+			<span class="origin-bottom whitespace-nowrap text-sm text-black" aria-labelledby="ref-label">
+				Ref. {slides[currentIndex].ref}
+			</span>
+			<div class="h-thumbnail-line-height w-thumbnail-line-width bg-black"></div>
+			<span id="ref-label" class="sr-only">Reference number</span>
 
-		<span class="origin-top whitespace-nowrap text-sm text-black" aria-labelledby="desc-label">
-			{slides[currentIndex].description}
-		</span>
-		<span id="desc-label" class="sr-only">Product description</span>
-	</div>
+			<span class="origin-top whitespace-nowrap text-sm text-black" aria-labelledby="desc-label">
+				{slides[currentIndex].description}
+			</span>
+			<span id="desc-label" class="sr-only">Product description</span>
+		</div>
+	{/if}
 
 	<!-- Second thumbnail and SHOP NOW button -->
 	<div
