@@ -17,7 +17,7 @@
 <div class="flex min-h-[900px] flex-col items-end justify-start overflow-hidden bg-primary">
 	<!-- First thumbnail -->
 	<figure
-		class="mr-thumbnail-first-margin-right mt-thumbnail-first-margin-top h-thumbnail-first-height min-h-thumbnail-first-height w-thumbnail-first-width min-w-thumbnail-first-width self-end overflow-hidden"
+		class="min-h-thumbnail-first-height mr-thumbnail-first-margin-right mt-thumbnail-first-margin-top h-thumbnail-first-height w-thumbnail-first-width min-w-thumbnail-first-width self-end overflow-hidden"
 	>
 		<!-- Placeholder -->
 		<div
@@ -48,7 +48,9 @@
 
 	<!-- Text block with line -->
 	<div
-		class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top gap-thumbnail-text-gap flex rotate-90 items-center"
+		class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top
+	       hidden rotate-90 items-center
+	       gap-thumbnail-text-gap lg:flex"
 	>
 		<span class="origin-bottom whitespace-nowrap text-sm text-black" aria-labelledby="ref-label">
 			Ref. {slides[currentIndex].ref}
@@ -64,11 +66,11 @@
 
 	<!-- Second thumbnail and SHOP NOW button -->
 	<div
-		class="mr-thumbnail-second-margin-right mt-thumbnail-second-margin-top gap-thumbnail-text-gap flex w-[85%] items-end justify-end"
+		class="mr-thumbnail-second-margin-right mt-thumbnail-second-margin-top flex w-[85%] items-end justify-end gap-thumbnail-text-gap"
 	>
 		<!-- Second thumbnail -->
 		<figure
-			class="h-thumbnail-second-height min-h-thumbnail-second-height w-thumbnail-second-width min-w-thumbnail-second-width flex-none self-end overflow-hidden"
+			class="min-h-thumbnail-second-height h-thumbnail-second-height w-thumbnail-second-width min-w-thumbnail-second-width flex-none self-end overflow-hidden"
 		>
 			<!-- Placeholder -->
 			<div
