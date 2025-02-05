@@ -80,7 +80,7 @@
 		{/key}
 
 		<div
-			class="p-main-padding sm:p-main-padding-max absolute left-0 top-[18rem] flex w-full flex-col justify-between sm:flex-row"
+			class="p-nav-padding lg:p-main-padding-max absolute left-0 top-[18rem] flex w-full flex-col justify-between sm:flex-row"
 		>
 			<SlideInfo
 				season={slides[currentIndex].season}
