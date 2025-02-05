@@ -99,7 +99,7 @@
 		<TextOverlay season="Summer" title="2020" />
 
 		<nav
-			class="sm:p-main-padding-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
+			class="lg:p-main-padding-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
 			aria-live="polite"
 		>
