@@ -5,7 +5,7 @@
 	}>();
 
 	function enforceMaxLength() {
-		if (value.length > 20) {
+		if (value.length > 60) {
 			value = value.slice(0, 20);
 		}
 	}
@@ -16,7 +16,7 @@
 		type="text"
 		bind:value
 		{placeholder}
-		maxlength="20"
+		maxlength="60"
 		class="w-full border border-input-border p-input-padding placeholder-secondary-violett
 			   focus:outline-none focus:ring-2 focus:ring-secondary-violett"
 		aria-label="New task input"
