@@ -6,7 +6,7 @@
 
 	function enforceMaxLength() {
 		if (value.length > 60) {
-			value = value.slice(0, 20);
+			value = value.slice(0, 60);
 		}
 	}
 </script>

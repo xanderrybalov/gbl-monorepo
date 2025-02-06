@@ -20,8 +20,8 @@
 >
 	<span
 		class="{task.completed ? 'text-task-completed line-through' : 'text-task-pending'}
-	       max-w-[240px] overflow-visible whitespace-normal
-	       break-words text-left leading-relaxed"
+	       min-w-0 max-w-[240px] overflow-visible whitespace-normal break-words
+	       break-all text-left leading-relaxed sm:max-w-full"
 		id={`task-${task.id}`}
 	>
 		{task.text}
