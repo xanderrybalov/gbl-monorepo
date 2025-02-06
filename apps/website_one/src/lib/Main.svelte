@@ -4,6 +4,7 @@
 		Dots,
 		Header,
 		Navigation,
+		ShopNowButton,
 		SlideInfo,
 		Social,
 		TextOverlay,
@@ -11,6 +12,7 @@
 	} from './index.js';
 	import MainImage from './MainImage.svelte';
 	import Thumbnails from './Thumbnails.svelte';
+	import { onMount } from 'svelte';
 
 	const { slides = [] } = $props<{
 		slides: CollectionSlide[];
@@ -21,6 +23,15 @@
 	let mainImageLoaded = $state(false);
 	let thumbnailsLoaded: boolean[] = $state(Array(slides.length).fill(false));
 	let sliderId = crypto.randomUUID();
+	let showElement = $state(true);
+
+	onMount(() => {
+		showElement = window.innerWidth >= 1024;
+
+		window.addEventListener('resize', () => {
+			showElement = window.innerWidth >= 1024;
+		});
+	});
 
 	// Reset thumbnail loading when changing slide
 	$effect(() => {
@@ -96,8 +107,16 @@
 			/>
 		</div>
 
-		<TextOverlay season="Summer" title="2020" />
-
+		<div
+			class="p-nav-padding lg:p-main-padding-max absolute left-0 top-[28rem] flex w-full flex-col justify-between"
+		>
+			<TextOverlay season="Summer" title="2020" />
+			{#if !showElement}
+				<div class="mt-20 flex justify-start">
+					<ShopNowButton />
+				</div>
+			{/if}
+		</div>
 		<nav
 			class="lg:p-main-padding-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
@@ -107,13 +126,14 @@
 			<Dots {currentIndex} {slides} setSlide={(index: number) => (currentIndex = index)} />
 		</nav>
 	</div>
-
-	<Thumbnails
-		thumbnails={slides[currentIndex].thumbnails}
-		mainImage={slides[currentIndex].mainImage}
-		{currentIndex}
-		{handleThumbnailLoad}
-		{thumbnailsLoaded}
-		{slides}
-	/>
+	{#if showElement}
+		<Thumbnails
+			thumbnails={slides[currentIndex].thumbnails}
+			mainImage={slides[currentIndex].mainImage}
+			{currentIndex}
+			{handleThumbnailLoad}
+			{thumbnailsLoaded}
+			{slides}
+		/>
+	{/if}
 </div>
