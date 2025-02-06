@@ -91,7 +91,7 @@
 
 {#if isMenuOpen}
 	<div
-		class="menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center bg-primary transition-all duration-500"
+		class="menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center transition-all duration-500"
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="menu-button"
