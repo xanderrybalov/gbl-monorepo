@@ -6,7 +6,7 @@
 	}>();
 </script>
 
-<p role="heading" aria-level="2" class="text-sm font-bold text-white md:text-xs">
+<p role="heading" aria-level="2" class="text-sm font-bold text-white">
 	{season}<br />
 	{title}<br />
 	{year}

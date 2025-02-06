@@ -65,7 +65,7 @@
 
 	<div class="flex gap-menu-gap">
 		<button
-			class="text-lg font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black md:text-sm"
+			class="text-sm font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 			class:text-text-black={currentLanguage === 'ENG'}
 			class:text-secondary={currentLanguage !== 'ENG'}
 			onclick={() => switchLanguage('ENG')}
@@ -76,7 +76,7 @@
 			ENG
 		</button>
 		<button
-			class="text-lg font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black md:text-sm"
+			class="text-sm font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 			class:text-text-black={currentLanguage === 'FR'}
 			class:text-secondary={currentLanguage !== 'FR'}
 			onclick={() => switchLanguage('FR')}

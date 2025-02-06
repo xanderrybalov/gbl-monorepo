@@ -76,10 +76,7 @@
 	id={sliderId}
 >
 	<Header initialLanguage="ENG" onLanguageChange={handleLanguageChange} />
-	<div
-		class="relative h-screen min-h-[900px] bg-primary md:min-h-[1000px] lg:min-h-[900px]"
-		id={sliderId}
-	>
+	<div class="min-h-auto relative h-screen bg-primary lg:min-h-[900px]" id={sliderId}>
 		{#key slides[currentIndex].id}
 			<MainImage
 				mainImage={slides[currentIndex].mainImage}
@@ -118,7 +115,7 @@
 			{/if}
 		</div>
 		<nav
-			class="lg:p-main-padding-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
+			class="lg:p-main-padding-nav-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
 			aria-live="polite"
 		>

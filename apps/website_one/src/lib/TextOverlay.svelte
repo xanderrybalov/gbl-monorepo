@@ -9,14 +9,14 @@
 >
 	<span
 		id="season-title"
-		class="block text-[5rem] font-light sm:text-[4rem] md:text-title-text-xl lg:text-season-text-lg xl:text-title-text-xl"
+		class="block text-[5rem] font-light lg:text-season-text-lg xl:text-title-text-xl"
 	>
 		{season}
 	</span>
 
 	<span
 		id="title-name"
-		class="block text-[5rem] font-light sm:text-[4rem] md:text-title-text-xl lg:text-season-text-lg xl:text-title-text-xl"
+		class="block text-[5rem] font-light lg:text-season-text-lg xl:text-title-text-xl"
 	>
 		{title}
 	</span>
