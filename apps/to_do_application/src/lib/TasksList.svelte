@@ -20,7 +20,7 @@
 			return;
 		}
 
-		if (newTaskText.length > 20) {
+		if (newTaskText.length > 60) {
 			showError = false;
 			return;
 		}
@@ -45,8 +45,8 @@
 
 		<Input bind:value={newTaskText} placeholder="Add Task" />
 
-		{#if newTaskText.length >= 20}
-			<p class="mt-2 text-sm text-green-500">⚠️ Maximum 20 characters allowed.</p>
+		{#if newTaskText.length >= 60}
+			<p class="mt-2 text-sm text-green-500">⚠️ Maximum 60 characters allowed.</p>
 		{/if}
 
 		{#if showError}

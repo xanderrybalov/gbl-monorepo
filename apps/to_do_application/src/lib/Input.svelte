@@ -1,12 +1,11 @@
 <script lang="ts">
-	let { value = $bindable(''), placeholder = 'Add Task' } = $props<{
-		value: string;
-		placeholder?: string;
-	}>();
+	export let value: string = '';
+	export let placeholder: string = 'Add Task';
 
-	function enforceMaxLength() {
-		if (value.length > 20) {
-			value = value.slice(0, 20);
+	function enforceMaxLength(event: Event) {
+		let input = (event.target as HTMLInputElement).value;
+		if (input.length > 60) {
+			value = input.slice(0, 60);
 		}
 	}
 </script>
@@ -15,11 +14,11 @@
 	<input
 		type="text"
 		bind:value
+		maxlength="60"
+		oninput={enforceMaxLength}
 		{placeholder}
-		maxlength="20"
 		class="w-full border border-input-border p-input-padding placeholder-secondary-violett
 			   focus:outline-none focus:ring-2 focus:ring-secondary-violett"
 		aria-label="New task input"
-		oninput={enforceMaxLength}
 	/>
 </div>
