@@ -88,31 +88,30 @@
 		{/key}
 
 		<div
-			class="p-nav-padding lg:p-main-padding-max absolute left-0 top-[18rem] flex w-full flex-col justify-between sm:flex-row"
+			class="p-nav-padding lg:p-main-padding-max absolute bottom-[10rem] left-0 flex w-full flex-col"
 		>
-			<SlideInfo
-				season={slides[currentIndex].season}
-				title={slides[currentIndex].title}
-				year={slides[currentIndex].year}
-			/>
+			<div class=" mb-[2rem] flex flex-col justify-between sm:flex-row lg:mb-[6rem]">
+				<SlideInfo
+					season={slides[currentIndex].season}
+					title={slides[currentIndex].title}
+					year={slides[currentIndex].year}
+				/>
 
-			<Navigation
-				onPrevious={prevSlide}
-				onNext={nextSlide}
-				currentSlide={currentIndex}
-				totalSlides={slides.length}
-			/>
-		</div>
-
-		<div
-			class="p-nav-padding lg:p-main-padding-max absolute left-0 top-[28rem] flex w-full flex-col justify-between"
-		>
-			<TextOverlay season="Summer" title="2020" />
-			{#if !showElement}
-				<div class="mt-20 flex justify-start">
-					<ShopNowButton />
-				</div>
-			{/if}
+				<Navigation
+					onPrevious={prevSlide}
+					onNext={nextSlide}
+					currentSlide={currentIndex}
+					totalSlides={slides.length}
+				/>
+			</div>
+			<div class="flex flex-col justify-between">
+				<TextOverlay season="Summer" title="2020" />
+				{#if !showElement}
+					<div class="mt-20 flex justify-start">
+						<ShopNowButton />
+					</div>
+				{/if}
+			</div>
 		</div>
 		<nav
 			class="lg:p-main-padding-nav-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
