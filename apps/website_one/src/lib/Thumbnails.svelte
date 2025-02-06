@@ -14,10 +14,10 @@
 		}>();
 </script>
 
-<div class="flex min-h-[900px] flex-col items-end justify-start overflow-hidden bg-primary">
+<div class="min-h-auto flex flex-col items-end justify-end overflow-hidden bg-primary">
 	<!-- First thumbnail -->
 	<figure
-		class="min-h-thumbnail-first-height mr-thumbnail-first-margin-right mt-thumbnail-first-margin-top h-thumbnail-first-height w-thumbnail-first-width min-w-thumbnail-first-width self-end overflow-hidden"
+		class="mb-[3rem] mr-thumbnail-first-margin-right h-thumbnail-first-height w-thumbnail-first-width"
 	>
 		<!-- Placeholder -->
 		<div
@@ -47,7 +47,7 @@
 	</figure>
 	<!-- Text block with line -->
 	<div
-		class="mr-thumbnail-text-margin-right mt-thumbnail-text-margin-top
+		class="absolute top-1/2 mr-thumbnail-text-margin-right
 		       flex rotate-90 items-center gap-thumbnail-text-gap"
 	>
 		<span class="origin-bottom whitespace-nowrap text-sm text-black" aria-labelledby="ref-label">
@@ -64,7 +64,7 @@
 
 	<!-- Second thumbnail and SHOP NOW button -->
 	<div
-		class="mr-thumbnail-second-margin-right mt-thumbnail-second-margin-top flex w-[85%] items-end justify-end gap-thumbnail-text-gap"
+		class="pt- mr-thumbnail-second-margin-right flex w-[85%] items-end justify-end gap-thumbnail-text-gap pb-[4rem]"
 	>
 		<!-- Second thumbnail -->
 		<figure

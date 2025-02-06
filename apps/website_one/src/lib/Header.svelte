@@ -40,13 +40,10 @@
 
 <div
 	class="p-nav-padding lg:p-nav-padding-lg fixed left-0 top-0 z-50 flex w-full items-center justify-between transition-colors duration-300"
-	class:bg-white={scrolled}
 >
 	<button
 		id="menu-button"
-		class="flex items-center gap-2 transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
-		class:text-text-black={scrolled}
-		class:text-text-white={!scrolled}
+		class="flex items-center gap-2 text-white transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 		onclick={openMenu}
 		aria-label="Open menu"
 		aria-haspopup="menu"
@@ -56,8 +53,6 @@
 			src="/menu.svg"
 			alt=""
 			class="h-menu-icon-height w-menu-icon-width invert filter transition-all duration-300"
-			class:invert-0={scrolled}
-			class:invert={!scrolled}
 			aria-hidden="true"
 		/>
 		<span class="pl-menu-text-padding">Menu</span>
@@ -91,7 +86,7 @@
 
 {#if isMenuOpen}
 	<div
-		class="menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center transition-all duration-500"
+		class="menu-overlay-opacity fixed inset-0 z-50 flex flex-col items-center justify-center bg-primary transition-all duration-500"
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="menu-button"

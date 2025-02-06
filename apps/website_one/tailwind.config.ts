@@ -50,12 +50,12 @@ export default {
 				'title-position-left': '3.8rem',
 				'thumbnail-first-margin-top': '14.5rem',
 				'thumbnail-first-margin-right': '8.5rem',
-				'thumbnail-second-margin-top': '6.5rem',
+				'thumbnail-second-padding': '2rem 0 4rem 0',
 				'thumbnail-second-margin-right': '4rem',
 				'thumbnail-text-margin-top': '-6rem',
 				'thumbnail-text-margin-right': '-8.5rem',
 				'thumbnail-text-gap': '3rem',
-				'title-padding': '1rem', // По умолчанию
+				'title-padding': '1rem',
 				'title-padding-sm': '2rem',
 				'title-padding-md': '3rem'
 			},
@@ -89,7 +89,7 @@ export default {
 			fontSize: {
 				'menu-button-text': '2xl',
 				'menu-link-text': '4xl',
-				'season-text-lg': '6rem', // По умолчанию
+				'season-text-lg': '6rem',
 				'season-text-base': '9rem',
 				'title-text-xl': '11rem',
 				'title-text-base': '9rem'

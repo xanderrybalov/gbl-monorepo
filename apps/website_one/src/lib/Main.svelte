@@ -72,11 +72,14 @@
 </script>
 
 <div
-	class="grid max-h-screen min-h-screen bg-primary md:grid-cols-[auto] lg:grid-cols-[auto_600px]"
+	class="grid max-h-screen min-h-screen bg-primary"
+	class:lg:grid-cols-[auto_600px]={showElement}
+	class:lg:grid-cols-[auto]={!showElement}
 	id={sliderId}
 >
 	<Header initialLanguage="ENG" onLanguageChange={handleLanguageChange} />
-	<div class="min-h-auto relative h-screen bg-primary lg:min-h-[900px]" id={sliderId}>
+
+	<div class="relative min-h-screen bg-primary lg:min-h-[100vh]">
 		{#key slides[currentIndex].id}
 			<MainImage
 				mainImage={slides[currentIndex].mainImage}
@@ -88,9 +91,9 @@
 		{/key}
 
 		<div
-			class="p-nav-padding lg:p-main-padding-max absolute bottom-[10rem] left-0 flex w-full flex-col"
+			class="p-nav-padding lg:p-main-padding-max absolute bottom-1/4 left-0 flex w-full flex-col md:bottom-[10rem]"
 		>
-			<div class=" mb-[2rem] flex flex-col justify-between sm:flex-row lg:mb-[6rem]">
+			<div class="mb-[2rem] flex flex-col justify-between sm:flex-row lg:mb-[6rem]">
 				<SlideInfo
 					season={slides[currentIndex].season}
 					title={slides[currentIndex].title}
@@ -113,6 +116,7 @@
 				{/if}
 			</div>
 		</div>
+
 		<nav
 			class="lg:p-main-padding-nav-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
@@ -122,6 +126,7 @@
 			<Dots {currentIndex} {slides} setSlide={(index: number) => (currentIndex = index)} />
 		</nav>
 	</div>
+
 	{#if showElement}
 		<Thumbnails
 			thumbnails={slides[currentIndex].thumbnails}
