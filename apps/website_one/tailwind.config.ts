@@ -22,8 +22,12 @@ export default {
 				'header-bold': '700'
 			},
 			spacing: {
-				'primary-padding': '2rem 4rem 2rem 3.5rem',
-				'secondary-padding': '2rem 3.5rem 0 4.5rem',
+				'nav-padding': '2rem 1rem 2rem 1rem',
+				'nav-padding-lg': '2rem 4rem 2rem 3.5rem',
+				'main-padding': '2rem 1rem 2rem 1rem',
+				'main-padding-nav': '2rem 1rem 4rem 3.5rem',
+				'main-padding-max': '2rem 2rem 2rem 5rem',
+				'main-padding-nav-max': '2rem 4rem 4rem 5rem',
 				'menu-text-padding': '1rem',
 				'thumbnail-gap': '1.5rem',
 				'button-padding-x': '6rem !important',
@@ -44,14 +48,16 @@ export default {
 				'social-gap': '2.5rem',
 				'title-position-top': '29rem',
 				'title-position-left': '3.8rem',
-				'content-info-top': '51rem',
 				'thumbnail-first-margin-top': '14.5rem',
 				'thumbnail-first-margin-right': '8.5rem',
-				'thumbnail-second-margin-top': '6.5rem',
+				'thumbnail-second-padding': '2rem 0 4rem 0',
 				'thumbnail-second-margin-right': '4rem',
 				'thumbnail-text-margin-top': '-6rem',
 				'thumbnail-text-margin-right': '-8.5rem',
-				'thumbnail-text-gap': '3rem'
+				'thumbnail-text-gap': '3rem',
+				'title-padding': '1rem',
+				'title-padding-sm': '2rem',
+				'title-padding-md': '3rem'
 			},
 			height: {
 				'thumbnail-upper': '60%',
@@ -63,7 +69,7 @@ export default {
 				'thumbnail-first-height': '330px',
 				'thumbnail-second-height': '275px',
 				'thumbnail-line-height': '2px',
-				'thumbnail-min-height':'900px',
+				'thumbnail-min-height': '900px'
 			},
 			width: {
 				'indicator-size': '0.5rem',
@@ -83,11 +89,9 @@ export default {
 			fontSize: {
 				'menu-button-text': '2xl',
 				'menu-link-text': '4xl',
-				'season-text-xl': '11rem',
-				'season-text-lg': '5rem',
+				'season-text-lg': '6rem',
 				'season-text-base': '9rem',
 				'title-text-xl': '11rem',
-				'title-text-lg': '10rem',
 				'title-text-base': '9rem'
 			},
 			letterSpacing: {

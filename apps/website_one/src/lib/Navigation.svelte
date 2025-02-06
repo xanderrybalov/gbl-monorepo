@@ -11,7 +11,7 @@
 </script>
 
 <nav
-	class="absolute right-navigation-right top-navigation-top z-10 flex -translate-y-1/2 transform items-center"
+	class="flex items-center space-x-4 pt-6 sm:pt-0"
 	aria-label="Slide navigation"
 	aria-live="polite"
 >

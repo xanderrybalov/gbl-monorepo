@@ -2,7 +2,9 @@
 	import { browser } from '$app/environment';
 	import {
 		Dots,
+		Header,
 		Navigation,
+		ShopNowButton,
 		SlideInfo,
 		Social,
 		TextOverlay,
@@ -10,6 +12,7 @@
 	} from './index.js';
 	import MainImage from './MainImage.svelte';
 	import Thumbnails from './Thumbnails.svelte';
+	import { onMount } from 'svelte';
 
 	const { slides = [] } = $props<{
 		slides: CollectionSlide[];
@@ -20,6 +23,15 @@
 	let mainImageLoaded = $state(false);
 	let thumbnailsLoaded: boolean[] = $state(Array(slides.length).fill(false));
 	let sliderId = crypto.randomUUID();
+	let showElement = $state(true);
+
+	onMount(() => {
+		showElement = window.innerWidth >= 1024;
+
+		window.addEventListener('resize', () => {
+			showElement = window.innerWidth >= 1024;
+		});
+	});
 
 	// Reset thumbnail loading when changing slide
 	$effect(() => {
@@ -53,16 +65,21 @@
 		mainImageLoaded = false;
 		currentIndex = (currentIndex - 1 + slides.length) % slides.length;
 	}
+
+	function handleLanguageChange(newLanguage: 'ENG' | 'FR') {
+		console.log(`Language changed to ${newLanguage}`);
+	}
 </script>
 
 <div
-	class="grid max-h-screen min-h-screen bg-primary md:grid-cols-[auto] lg:grid-cols-[auto_600px]"
+	class="grid max-h-screen min-h-screen bg-primary"
+	class:lg:grid-cols-[auto_600px]={showElement}
+	class:lg:grid-cols-[auto]={!showElement}
 	id={sliderId}
 >
-	<div
-		class="relative h-screen min-h-[900px] bg-primary md:min-h-[1000px] lg:min-h-[900px]"
-		id={sliderId}
-	>
+	<Header initialLanguage="ENG" onLanguageChange={handleLanguageChange} />
+
+	<div class="relative min-h-screen bg-primary lg:min-h-[100vh]">
 		{#key slides[currentIndex].id}
 			<MainImage
 				mainImage={slides[currentIndex].mainImage}
@@ -73,23 +90,35 @@
 			/>
 		{/key}
 
-		<SlideInfo
-			season={slides[currentIndex].season}
-			title={slides[currentIndex].title}
-			year={slides[currentIndex].year}
-		/>
+		<div
+			class="p-nav-padding lg:p-main-padding-max absolute bottom-1/4 left-0 flex w-full flex-col md:bottom-[10rem]"
+		>
+			<div class="mb-[2rem] flex flex-col justify-between sm:flex-row lg:mb-[6rem]">
+				<SlideInfo
+					season={slides[currentIndex].season}
+					title={slides[currentIndex].title}
+					year={slides[currentIndex].year}
+				/>
 
-		<Navigation
-			onPrevious={prevSlide}
-			onNext={nextSlide}
-			currentSlide={currentIndex}
-			totalSlides={slides.length}
-		/>
-
-		<TextOverlay season="Summer" title="2020" />
+				<Navigation
+					onPrevious={prevSlide}
+					onNext={nextSlide}
+					currentSlide={currentIndex}
+					totalSlides={slides.length}
+				/>
+			</div>
+			<div class="flex flex-col justify-between">
+				<TextOverlay season="Summer" title="2020" />
+				{#if !showElement}
+					<div class="mt-20 flex justify-start">
+						<ShopNowButton />
+					</div>
+				{/if}
+			</div>
+		</div>
 
 		<nav
-			class="absolute left-0 top-content-info-top flex w-full items-center justify-between p-secondary-padding text-white"
+			class="lg:p-main-padding-nav-max p-main-padding absolute bottom-0 flex w-full items-center justify-between text-white"
 			aria-label="Slide navigation"
 			aria-live="polite"
 		>
@@ -98,12 +127,14 @@
 		</nav>
 	</div>
 
-	<Thumbnails
-		thumbnails={slides[currentIndex].thumbnails}
-		mainImage={slides[currentIndex].mainImage}
-		{currentIndex}
-		{handleThumbnailLoad}
-		{thumbnailsLoaded}
-		{slides}
-	/>
+	{#if showElement}
+		<Thumbnails
+			thumbnails={slides[currentIndex].thumbnails}
+			mainImage={slides[currentIndex].mainImage}
+			{currentIndex}
+			{handleThumbnailLoad}
+			{thumbnailsLoaded}
+			{slides}
+		/>
+	{/if}
 </div>

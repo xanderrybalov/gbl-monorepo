@@ -39,14 +39,11 @@
 </script>
 
 <div
-	class="fixed left-0 top-0 z-50 flex w-full items-center justify-between p-primary-padding transition-colors duration-300"
-	class:bg-white={scrolled}
+	class="p-nav-padding lg:p-nav-padding-lg fixed left-0 top-0 z-50 flex w-full items-center justify-between transition-colors duration-300"
 >
 	<button
 		id="menu-button"
-		class="flex items-center gap-2 transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
-		class:text-text-black={scrolled}
-		class:text-text-white={!scrolled}
+		class="flex items-center gap-2 text-white transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 		onclick={openMenu}
 		aria-label="Open menu"
 		aria-haspopup="menu"
@@ -56,8 +53,6 @@
 			src="/menu.svg"
 			alt=""
 			class="h-menu-icon-height w-menu-icon-width invert filter transition-all duration-300"
-			class:invert-0={scrolled}
-			class:invert={!scrolled}
 			aria-hidden="true"
 		/>
 		<span class="pl-menu-text-padding">Menu</span>
@@ -65,7 +60,7 @@
 
 	<div class="flex gap-menu-gap">
 		<button
-			class="text-lg font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black md:text-sm"
+			class="text-sm font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 			class:text-text-black={currentLanguage === 'ENG'}
 			class:text-secondary={currentLanguage !== 'ENG'}
 			onclick={() => switchLanguage('ENG')}
@@ -76,7 +71,7 @@
 			ENG
 		</button>
 		<button
-			class="text-lg font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black md:text-sm"
+			class="text-sm font-bold transition-colors duration-300 focus-visible:outline focus-visible:ring-2 focus-visible:ring-black"
 			class:text-text-black={currentLanguage === 'FR'}
 			class:text-secondary={currentLanguage !== 'FR'}
 			onclick={() => switchLanguage('FR')}
